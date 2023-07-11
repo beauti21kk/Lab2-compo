@@ -7,8 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-const event = ref({
+import { ref } from 'vue';
+import { type EventItem } from '@/type';
+const event = ref<EventItem>({
     id: 5928101,
     category: 'animal welfare',
     title: 'Cart Adoption Day',
