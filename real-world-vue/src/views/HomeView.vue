@@ -37,12 +37,11 @@ const events = ref<EventItem[]>([
           petsAllowed: false,
           organizer: 'Carey Wales'
         }
-
 ])
 </script>
 
 <template>
   <main>
-    <EventCard></EventCard>
+    <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
   </main>
 </template>
