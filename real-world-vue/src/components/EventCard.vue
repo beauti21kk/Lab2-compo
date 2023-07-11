@@ -2,7 +2,20 @@
     <div class="event-class"></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+const event = ref({
+    id: 5928101,
+    category: 'animal welfare',
+    title: 'Cart Adoption Day',
+    description: 'Find your new feline friend at this event.',
+    location: 'Meow Town',
+    date: 'January 28, 2022',
+    time: '12:00',
+    petsAllowed: true,
+    organizer: 'Kat Laydee'
+})
+</script>
 
 <style scoped>
 .event-card{
@@ -18,3 +31,4 @@
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
 </style>
+
