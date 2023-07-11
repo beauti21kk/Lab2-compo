@@ -6,6 +6,6 @@ export interface EventItem{
     location: string
     date: string
     time: string
-    petsAllowed: true
+    petsAllowed: boolean
     organizer: string
 }
