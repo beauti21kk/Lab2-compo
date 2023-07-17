@@ -8,6 +8,7 @@ import EventService from '@/services/EventService'
 const events: Ref<Array<EventItem>> = ref([])
   EventService.getEvent().then((response: { data: EventItem[]; }) => {
     events.value = response.data
+    console.log(events.value)
   })
 /* const events = ref<EventItem[]>([
 {
