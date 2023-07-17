@@ -3,8 +3,13 @@ import EventCard from '../components/EventCard.vue'
 //import EventCategories from '@/components/EventCategories.vue'
 import type { EventItem } from '@/type'
 
-import { ref } from 'vue'
-const events = ref<EventItem[]>([
+import { ref, type Ref } from 'vue'
+import EventService from '@/services/EventService'
+const events: Ref<Array<EventItem>> = ref([])
+  EventService.getEvent().then((response: { data: EventItem[]; }) => {
+    events.value = response.data
+  })
+/* const events = ref<EventItem[]>([
 {
           id: 5928101,
           category: 'animal welfare',
@@ -38,7 +43,7 @@ const events = ref<EventItem[]>([
           petsAllowed: false,
           organizer: 'Carey Wales'
         }
-])
+]) */
 </script>
 
 <template>
